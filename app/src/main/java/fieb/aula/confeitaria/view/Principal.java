@@ -13,7 +13,7 @@ import fieb.aula.confeitaria.R;
 
 public class Principal extends AppCompatActivity {
 
-    Button btnPedidos, btnPromocoes, btnHistorio, btnMeusDados, btnQuemSomos, btnVoltarPrincipal;
+    Button btnQuemSomos, btnVoltarPrincipal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,10 +26,11 @@ public class Principal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder quemSomos = new AlertDialog.Builder(Principal.this);
-                quemSomos.setTitle("Somos da Confeitaria Que Delícia");
-                quemSomos.setMessage("Tudo feito a mão por renomados confeiteiros\\verdadeiros artistas" +
-                        "\ncom fornos de ultima geração por isso uma Delícia" +
-                        "\nAproveite nossas promoções!!!\nAguardo seus pedidos");
+                quemSomos.setTitle("Somos a MagicTI");
+                quemSomos.setMessage("Temos uma equipe totalmente apropriada \npara o desenvolvimento do curso." +
+                        "\ncomposta pelos  seguintes alunos: " +
+                        "\nGessivan Junior \nKetlen Oliveira \nKaua Selles \nJhonatan Torquato \nMurilo Trijilo" +
+                        "\nAgradecemos aos professores por ajudar a conclusão desse trabalho.<3");
 
                 quemSomos.setCancelable(false);
 
@@ -44,31 +45,13 @@ public class Principal extends AppCompatActivity {
         });
 
 
-        btnHistorio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Historico.class);
-                startActivity(intent);
-            }
-        });
 
-        btnPedidos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Pedido.class);
-                startActivity(intent);
-            }
-        });
 
 
     }
 
 
     private void InicializarComponentes() {
-        btnPedidos = findViewById(R.id.btnPedidos);
-        btnPromocoes = findViewById(R.id.btnPromocoes);
-        btnHistorio = findViewById(R.id.btnHistorico);
-        btnMeusDados = findViewById(R.id.btnMeusDados);
         btnQuemSomos = findViewById(R.id.btnQuemSomos);
         btnVoltarPrincipal = findViewById(R.id.btnVoltarPrincipal);
     }
