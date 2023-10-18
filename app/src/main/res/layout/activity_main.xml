@@ -1,45 +1,30 @@
-
-
-.610<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity">
+    tools:context=".view.MainActivity"
+    android:background="@drawable/login">
 
-    <TextView
-        android:id="@+id/tvInfo"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:text="Confeitaria"
-        android:textAlignment="center"
-        android:textColor="@android:color/holo_blue_dark"
-        android:textSize="33sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="210dp"
         android:layout_marginEnd="32dp"
         android:drawableLeft="@android:drawable/sym_action_email"
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="@string/app_email"
         android:inputType="textPersonName"
+        android:textColorHint="#FFFBFB"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvInfo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtLogin"
@@ -50,10 +35,11 @@
         android:layout_marginEnd="32dp"
         android:drawableLeft="@android:drawable/ic_secure"
         android:drawablePadding="10dp"
-        android:textSize="24dp"
         android:ems="10"
         android:hint="@string/app_senha"
         android:inputType="textPassword"
+        android:textColorHint="#FFFEFE"
+        android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
@@ -66,6 +52,7 @@
         android:layout_marginTop="70dp"
         android:layout_marginEnd="32dp"
         android:text="@string/app_botao_login"
+        android:textColorHighlight="#00BCD4"
         android:textSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,6 +67,7 @@
         android:layout_marginEnd="32dp"
         android:onClick="esqueciMinhaSenha"
         android:text="Esqueci Minha Senha"
+        android:textColor="#FAFAFA"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
@@ -91,8 +79,9 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="27dp"
         android:layout_marginEnd="32dp"
-        android:text="Novo Cadastro"
         android:onClick="novoCadastro"
+        android:text="Novo Cadastro"
+        android:textColor="#FBFBFB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEsqueciSenha" />
